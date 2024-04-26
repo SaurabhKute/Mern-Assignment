@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 
 import UserPage from '../../user/view/user-view';
 
-import AppCurrentVisits from '../app-current-visits';
-import AppWebsiteVisits from '../app-website-visits';
-import AppWidgetSummary from '../app-widget-summary';
+import AppPieChartSummery from '../pie-chart';
+import AppBarChartSummery from '../bar-chart';
+import AppStatisticsSummery from '../sale-statistics';
 import { useSelector } from 'react-redux';
 
 
@@ -41,7 +41,7 @@ export default function AppView() {
 
 
         <Grid xs={12} sm={6} md={4}>
-          <AppWidgetSummary
+          <AppStatisticsSummery
             title="Total Sale"
             subheader="₹"
             total={Number(stats?.totalSaleAmount ? stats?.totalSaleAmount : 0).toFixed(2)}
@@ -51,7 +51,7 @@ export default function AppView() {
         </Grid>
 
         <Grid xs={12} sm={6} md={4}>
-          <AppWidgetSummary
+          <AppStatisticsSummery
             title="Total Sold Items"
             // subheader="Items"
             total={stats?.totalSoldItems ? stats?.totalSoldItems : 0}
@@ -61,7 +61,7 @@ export default function AppView() {
         </Grid>
 
         <Grid xs={12} sm={6} md={4}>
-          <AppWidgetSummary
+          <AppStatisticsSummery
             title="Total Not Sold Items"
             // subheader="Items"
             total={stats?.totalNotSoldItems ? stats?.totalNotSoldItems : 0}
@@ -73,7 +73,7 @@ export default function AppView() {
 
 
         {/* <Grid xs={12} md={6} lg={8}>
-          <AppWebsiteVisits
+          <AppBarChartSummery
             title="Bar Chart Statistics"
             subheader=""
             chart={{
@@ -86,7 +86,7 @@ export default function AppView() {
         </Grid>
 
         <Grid xs={12} md={6} lg={4}>
-          <AppCurrentVisits
+          <AppPieChartSummery
             title="Current Visits"
             chart={{
               series: pieData
@@ -97,7 +97,7 @@ export default function AppView() {
 
 <Grid item xs={12} md={6} lg={8}>
   {chartData && chartData?.length > 0 && (
-    <AppWebsiteVisits
+    <AppBarChartSummery
       title="Bar Chart Statistics"
       subheader=""
       chart={{
@@ -111,7 +111,7 @@ export default function AppView() {
 
 <Grid item xs={12} md={6} lg={4}>
   {pieData && pieData?.length > 0 && (
-    <AppCurrentVisits
+    <AppPieChartSummery
       title="Pie Chart Statistics"
       chart={{
         series: pieData

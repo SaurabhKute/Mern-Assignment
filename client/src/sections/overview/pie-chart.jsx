@@ -26,7 +26,7 @@ const StyledChart = styled(Chart)(({ theme }) => ({
 }));
 
 
-export default function AppCurrentVisits({ title, subheader, chart, ...other }) {
+export default function AppPieChartSummery({ title, subheader, chart, ...other }) {
   const theme = useTheme();
 
   const { colors, series, options } = chart;
@@ -92,7 +92,7 @@ export default function AppCurrentVisits({ title, subheader, chart, ...other }) 
   );
 }
 
-AppCurrentVisits.propTypes = {
+AppPieChartSummery.propTypes = {
   chart: PropTypes.object,
   subheader: PropTypes.string,
   title: PropTypes.string,
