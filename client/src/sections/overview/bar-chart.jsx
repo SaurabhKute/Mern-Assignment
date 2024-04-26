@@ -7,7 +7,7 @@ import CardHeader from '@mui/material/CardHeader';
 import Chart, { useChart } from '../../components/chart';
 
 
-export default function AppWebsiteVisits({ title, subheader, chart, ...other }) {
+export default function AppBarChartSummery({ title, subheader, chart, ...other }) {
   const { series } = chart;
 
   const chartOptions = useChart({
@@ -42,7 +42,7 @@ export default function AppWebsiteVisits({ title, subheader, chart, ...other }) 
   );
 }
 
-AppWebsiteVisits.propTypes = {
+AppBarChartSummery.propTypes = {
   chart: PropTypes.object,
   subheader: PropTypes.string,
   title: PropTypes.string,

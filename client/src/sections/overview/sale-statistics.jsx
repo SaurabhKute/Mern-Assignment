@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 
-export default function AppWidgetSummary({ title, subheader, total, icon, color = 'primary', sx, ...other }) {
+export default function AppStatisticsSummery({ title, subheader, total, icon, color = 'primary', sx, ...other }) {
   return (
     <Card
       component={Stack}
@@ -35,7 +35,7 @@ export default function AppWidgetSummary({ title, subheader, total, icon, color 
   );
 }
 
-AppWidgetSummary.propTypes = {
+AppStatisticsSummery.propTypes = {
   color: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   sx: PropTypes.object,
